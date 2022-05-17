@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730535051790",
+    "project_id": "chef-challenge-e9c11",
+    "storage_bucket": "chef-challenge-e9c11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730535051790:android:debfcfeb7515e8be61725f",
+        "android_client_info": {
+          "package_name": "chefchallenge.frontend.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730535051790-1vbmqulokil3fdrjp68toe8pri6i29q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlNRyWYux7n6p_tdkFhmXb-UyhHIBaT9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730535051790-1vbmqulokil3fdrjp68toe8pri6i29q9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
