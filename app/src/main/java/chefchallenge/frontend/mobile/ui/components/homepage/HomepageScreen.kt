@@ -1,4 +1,8 @@
 package chefchallenge.frontend.mobile.ui.components.homepage
 
-class HomepageScreen {
+import androidx.compose.runtime.Composable
+
+@Composable
+fun HomepageScreen() {
+
 }
