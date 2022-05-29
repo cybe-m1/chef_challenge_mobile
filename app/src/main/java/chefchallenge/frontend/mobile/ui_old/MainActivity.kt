@@ -11,6 +11,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import chefchallenge.frontend.mobile.data.repositories.IngredientRepository
+import chefchallenge.frontend.mobile.ui.components.ingredients.IngredientScreen
+import chefchallenge.frontend.mobile.ui.components.ingredients.IngredientViewModel
 import chefchallenge.frontend.mobile.ui.custom.navigation.BottomNavigationBar
 import chefchallenge.frontend.mobile.ui.theme.ComposableSampleTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -71,15 +74,11 @@ private fun UserScreenDestination() {
 
 @Composable
 private fun IngredientsScreenDestination() {
-    Text(text = "Ingredients screen")
+    IngredientScreen(viewModel = IngredientViewModel(IngredientRepository()))
 }
 
 
 object NavigationKeys {
-
-    object Arg {
-        const val IMAGE_URL = "imageUrl"
-    }
 
     object Route {
         const val HOMEPAGE = "homepage"

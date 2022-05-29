@@ -14,7 +14,7 @@ fun BottomNavigationBar(navController: NavHostController) {
     val items = listOf(
         NavigationItem.Homepage,
         NavigationItem.User,
-        NavigationItem.Receipe
+        NavigationItem.Ingredients
     )
 
     BottomNavigation(

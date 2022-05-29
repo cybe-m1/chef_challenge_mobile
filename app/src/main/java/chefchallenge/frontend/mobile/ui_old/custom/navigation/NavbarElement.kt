@@ -10,5 +10,5 @@ import chefchallenge.frontend.mobile.ui.NavigationKeys
 sealed class NavigationItem(var route: String, var icon: ImageVector, var title: String) {
     object Homepage: NavigationItem(NavigationKeys.Route.HOMEPAGE, Icons.Filled.Menu, "Homepage")
     object User: NavigationItem(NavigationKeys.Route.USER, Icons.Filled.Person, "User")
-    object Receipe: NavigationItem(NavigationKeys.Route.RECEIPE, Icons.Filled.Notifications, "Receipes")
+    object Ingredients: NavigationItem(NavigationKeys.Route.INGREDIENTS, Icons.Filled.Notifications, "Ingredients")
 }
