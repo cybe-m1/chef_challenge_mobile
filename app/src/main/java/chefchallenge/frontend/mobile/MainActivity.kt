@@ -62,7 +62,7 @@ fun ChefChallengeApp(navController: NavHostController, authViewModel: Authentica
             HomepageScreen(navController)
         }
         composable(route=Screens.ProfileScreen.route) {
-            ProfileScreen(navController)
+            ProfileScreen(navController, authViewModel)
         }
         composable(route=Screens.ReceipeScreen.route) {
             ReceipeScreen(navController)

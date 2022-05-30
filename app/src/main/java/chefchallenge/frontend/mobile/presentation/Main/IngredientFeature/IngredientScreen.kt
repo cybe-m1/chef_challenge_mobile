@@ -24,9 +24,7 @@ fun IngredientScreen(navController: NavController) {
     Column() {
         LazyColumn(
         ) {
-            for (value in listOf(ingredients.state.value)) {
-
-            }
+            /**/
         }
     }
 
