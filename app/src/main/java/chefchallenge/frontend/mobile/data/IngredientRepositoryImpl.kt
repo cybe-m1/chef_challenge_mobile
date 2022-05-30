@@ -1,6 +1,7 @@
 package chefchallenge.frontend.mobile.data.repositories
 
 import chefchallenge.frontend.mobile.domain.model.Ingredient
+import chefchallenge.frontend.mobile.domain.model.State
 import chefchallenge.frontend.mobile.util.Constants
 import chefchallenge.frontend.mobile.util.Response
 import com.google.firebase.firestore.ktx.firestore
@@ -16,21 +17,21 @@ import javax.inject.Singleton
 class IngredientRepositoryImpl @Inject constructor() {
     private val mIngredientsCollection = Firebase.firestore.collection(Constants.COLLECTION_NAME_INGREDIENTS)
 
-    fun getAllIngredientsData(): Flow<Response<List<Ingredient>>> = callbackFlow {
-        trySend(Response.Loading)
+    fun getAllIngredientsData(): Flow<State<List<Ingredient>>> = callbackFlow {
+        trySend(State.loading())
 
         val ingredientDocument = mIngredientsCollection
 
         val subscription = ingredientDocument.addSnapshotListener { snapshot, exception ->
             exception?.let {
-                trySend(Response.Error(it.message.toString()))
+                trySend(State.failed(it.message.toString()))
                 cancel(it.message.toString())
             }
 
             snapshot?.let {
                 val list: List<Ingredient> = it.documents.map { it.toObject(Ingredient::class.java)!! }
-                trySend(Response.Success(list)).isSuccess
-            } ?: trySend(Response.Error("Not found")).isFailure
+                trySend(State.success(list)).isSuccess
+            } ?: trySend(State.failed("Not found")).isFailure
         }
 
         awaitClose { subscription.remove() }

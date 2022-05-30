@@ -1,4 +1,4 @@
-package chefchallenge.frontend.mobile.data.entities
+package chefchallenge.frontend.mobile.domain.model
 
 sealed class State<T> {
     class Loading<T> : State<T>()

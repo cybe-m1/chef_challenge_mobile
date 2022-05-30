@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chef_challenge_mobile"
-        android:name=".ChefChallengeApplication">
+        android:name=".ChefChallengeApp">
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Chef_challenge_mobile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

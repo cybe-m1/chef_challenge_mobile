@@ -6,12 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -20,7 +17,7 @@ import chefchallenge.frontend.mobile.presentation.Authentication.AuthenticationV
 import chefchallenge.frontend.mobile.presentation.Authentication.LoginScreen
 import chefchallenge.frontend.mobile.presentation.Authentication.SignupScreen
 import chefchallenge.frontend.mobile.presentation.Main.HomepageScreen
-import chefchallenge.frontend.mobile.presentation.Main.IngredientScreen
+import chefchallenge.frontend.mobile.presentation.Main.IngredientFeature.IngredientScreen
 import chefchallenge.frontend.mobile.presentation.Main.ReceipeScreen
 import chefchallenge.frontend.mobile.presentation.Profile.ProfileScreen
 import chefchallenge.frontend.mobile.presentation.SplashScreen
